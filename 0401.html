@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>0401 </title>
+
+</head>
+<body>
+<div id="result"></div>
+<input  type="button"   id=input1></input>
+<p><button onclick="clickCounter()" type="button">+</button></p>
+
+</body>
+<script>
+
+	var test=document.getElementById("input1");
+	if(window.name == ""){
+		localStorage.clickcount = 0;
+		window.name = "true"; 
+		test.value = localStorage.clickcount ;
+    }
+	 else if(window.name == "true"){
+		test.value = localStorage.clickcount ;
+   }
+function clickCounter() {
+		var test=document.getElementById("input1");  
+		localStorage.clickcount = Number(localStorage.clickcount)+1;
+		test.value = localStorage.clickcount ;
+}
+</script>
+</html>
